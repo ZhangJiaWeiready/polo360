@@ -1,0 +1,336 @@
+.clearfix:before,
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.clearfix{
+    zoom:1;
+}
+.wrap{
+    width:100%;
+    height: 472px;
+    background: url("../img/polo360(1).png") repeat-x;
+}
+/*中间内容宽940px*/
+/*固定元素的宽度和居中 谁用给谁加class*/
+.widths{
+    width: 940px;
+    margin:0 auto;
+}
+.header{
+    /*上外边距的重叠问题*/
+
+    padding-top: 37px;
+    /*为了避免下面的轮播图继续设置padding so直接把黑的一部分占*/
+    /*直接给他设置下内边距直接占位*/
+    padding-bottom:46px;
+}
+.logo{
+    margin-left: 15px;
+
+}
+.nav{
+    float: right;
+    margin-top: 22px;
+}
+.nav li {
+    float: left;
+    padding:0 10px 8px;
+    border-left: 1px dotted #d6d6d6;
+}
+.nav a {
+    /*font:bold 14px Georgia;*/
+    font-size:14px;
+    font-family: Georgia;
+    color: #666666;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+.nav a:hover{
+    color:#a27272;
+    text-decoration: underline;
+}
+.nav p{
+    font-size:12px;
+    font-family: Tahoma;
+    color: #b7b7b7;
+}
+.banner{
+    height: 356px;
+    /*底部居中*/
+    background: url("../img/banner/shadow.png") bottom center no-repeat;
+    position: relative;
+}
+.point{
+    width: 105px;
+    height: 17px;
+    /*margin-top: -35px;
+    margin-left: 20px;*/
+    position: absolute;
+    top: 305px;
+    left: 20px;
+}
+.point span{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url("../img/banner/pointW.png") no-repeat;
+    /*放上来有样式*/
+    cursor: pointer;
+}
+.point span:hover{
+    background: url('../img/banner/pointB.png') no-repeat;
+}
+.content{
+    /*因为下面三个div浮动了 所以发生了高度塌陷
+    当设置了浮动的时候 要记得看看哪里发生了高度塌陷
+    */
+    /*background: red;*/
+   /* overflow: hidden;*/
+}
+.content h1{
+    font-family: Georgia;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    /*设置上外边距*/
+    /*传递给父级所以一般不设外边距*/
+    /*margin-top:;*/
+    padding-top: 6px;
+    background: url(../img/content/line.png) no-repeat bottom center;
+    padding-bottom: 20px;
+    /*和下面的留距离*/
+    margin-bottom: 38px;
+}
+.pl,.cs,.uc{
+    width: 300px;
+  /*高度由内容撑开*/
+    /*background: pink;*/
+    float: left;
+}
+.cs{
+    margin: 0 20px;
+}
+.content h2{
+    font-family:Georgia ;
+    font-size:21px  ;
+    color:#11719e;
+
+}
+.content h3{
+    font-family:Helvetica ;
+    font-size:12px  ;
+    color:#8c8c8c;
+}
+.content img{
+    margin: 16px 0 10px 0px;
+}
+.content p {
+    height: 92px;
+    font-family: Helvetica;
+    font-size: 13px;
+    color: #3e3e3e;
+    line-height: 18px;
+}
+.content a{
+    display: inline-block;
+    height: 40px;
+    width: 163px;
+    background: url("../img/content/button1.png") no-repeat;
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #016999;
+    line-height: 40px;
+    /*首行缩进*/
+    text-indent: 1em;
+    text-decoration: none;
+    margin-bottom: 36px;
+}
+.content a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.sc,.input,.na{
+    width: 300px;
+
+
+    float: left;
+}
+.sc{
+    margin-bottom: 0px;
+}
+.input{
+    margin:0 20px;
+}
+.contact{
+    background: url("../img/content/line.png") no-repeat top center;
+}
+.contact h1{
+    margin-top: 44px;
+    font-family:Georgia ;
+    font-size: 18px; 
+    color: #444444;
+    border-bottom: 1px dashed #d3d3d3;    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+}
+
+.tex{
+    width: 296px;
+    height:33px;
+    background: url("../img/content/txt.png") no-repeat;
+    _background-attachment:fixed;
+    border: none;
+    padding:0;
+    text-indent: 1em;
+    font-family:Verdana ;
+    font-size: 12px; ;
+    color: #d4d4d4;
+}
+.tex1{
+    margin-bottom: 12px;
+}
+.tex2{
+    margin-bottom: 18px;
+
+}
+.tarea{
+    width: 296px;
+    height: 134px;
+    background: url("../img/content/tarea.png" ) no-repeat;
+    border: none;
+    overflow: auto;
+    resize: none;
+    padding:0;
+    margin-bottom: 12px;
+    /*有默认的外边距每个浏览器都不一样*/
+    /*但对为IE6设置不随背景滚动的方式，使用hack*/
+    _background-attachment:fixed;
+    text-indent: 1em;
+    font-family: Verdana;
+    font-size: 12px;
+    color: #d4d4d4;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+}
+.but{
+    width: 163px;
+    height: 32px;
+    background: url("../img/content/button2.png") no-repeat;
+    border: none;
+    /*有默认的外边距 清除边距*/
+    font-family:Georgia ;
+    font-size: 13px;
+    color: #ffffff;
+}
+.but:hover{
+    cursor: pointer;
+    color: red;
+   text-decoration: underline;
+}
+.but1{
+    text-indent: -77px;
+}
+.but2,.but3{
+    text-indent: -90px;
+}
+.p{
+    font-size: 12px; ;
+    font-family: Helvetica;
+    color: #444444;
+}
+.p2{
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-family: Helvetica;
+    color: #444444;
+}
+
+.icon{
+    font-size: 0;
+    margin-top: 5px;
+}
+.icon a{
+    margin-right: 4px;
+}
+.news{
+    font-size: 18px; ;
+    font-family:GillSansMT ;
+    font-weight: bold;
+    color: #444;
+    border-bottom: 1px dashed #d3d3d3;
+    line-height: 1em;
+    margin-top: 38px;
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+}
+.na img{
+    /*利用浮动使文字环绕图片*/
+    float: left;
+    margin-right: 10px;
+}
+.na p{
+    font-family:Helvetica ;
+    font-size: 12px; ;
+    color:#444444;
+    line-height: 14px;
+    /*设置高度为图片的高度*/
+    height:58px;
+    border-bottom: 1px dashed #d3d3d3;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+}
+.footer{
+    margin-top: 23px;
+    width:100%;
+    height: 184px;
+    background: #000;
+    border-top: 10px solid #4c4c4c;
+    padding: 18px 23px 0 8px;
+    box-sizing: border-box;
+}
+.cont p{
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 10px; ;
+}
+.cont a{
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #999999;
+    text-decoration: none;
+
+}
+/*设置伪类*/
+.cont a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.copy{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.clearfix{
+    zoom:1
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear:both;
+}
